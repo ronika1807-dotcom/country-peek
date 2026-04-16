@@ -1,0 +1,27 @@
+import { Link } from "react-router-dom";
+
+function CountryCard({ country }) {
+  // 1. destructure needed fields
+  const { name, flags, population, region, capital, cca3 } = country;
+
+  return (
+    <Link to={`/country/${cca3}`} className="card">
+      {/* Flag image */}
+      <img
+        src={flags.svg}
+        alt={`${name.common} flag`}
+        className="card__flag"
+      />
+
+      {/* Card body */}
+      <div className="card__body">
+        <h3 className="card__name">{name.common}</h3>
+        <p>Population: {population.toLocaleString()}</p>
+        <p>Region: {region}</p>
+        <p>Capital: {capital?.[0] ?? "N/A"}</p>
+      </div>
+    </Link>
+  );
+}
+
+export default CountryCard;
