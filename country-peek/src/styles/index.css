@@ -1,0 +1,23 @@
+/* src/styles/index.css */
+
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* Anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
