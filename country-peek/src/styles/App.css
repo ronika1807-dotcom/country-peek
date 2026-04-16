@@ -1,0 +1,43 @@
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0077cc;
+  color: #fff;
+}
+
+.header__brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+}
+
+/* Search bar */
+.search-bar {
+  padding: 1rem;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Home */
+.home {
+  padding: 1rem;
+}
+
+.home__placeholder {
+  margin-top: 1rem;
+  color: #666;
+}
