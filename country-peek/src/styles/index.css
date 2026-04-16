@@ -1,23 +1,70 @@
-/* src/styles/index.css */
-
-/* Box-sizing reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* 1. Theme tokens */
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --card-bg: #fff;
+  --header-bg: #0077cc;
+  --input-border: #ccc;
 }
 
-/* Base body styles */
+/* 2. Dark theme overrides */
+[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #f9f9f9;
+  --card-bg: #2a2a2a;
+  --header-bg: #005fa3;
+  --input-border: #555;
+}
+
+/* 3. Use tokens */
 body {
   margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
 }
 
-/* Anchor styles */
-a {
-  text-decoration: none;
-  color: inherit;
+.card {
+  background-color: var(--card-bg);
+  color: var(--text);
+}
+
+.header {
+  background-color: var(--header-bg);
+  color: var(--text);
+}
+
+.search-bar__input {
+  border: 1px solid var(--input-border);
+  background-color: var(--card-bg);
+  color: var(--text);
+}
+
+/* 4. Filter bar */
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* 5. Filter bar select */
+.filter-bar select {
+  padding: 0.5rem;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background-color: var(--card-bg);
+  color: var(--text);
+}
+
+/* 6. Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  color: var(--text);
+  background-color: var(--card-bg);
 }
