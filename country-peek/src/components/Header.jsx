@@ -1,6 +1,6 @@
 // 1. import useTheme
 import { useTheme } from "../context/ThemeContext";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   // 2. destructure theme and toggleTheme
@@ -8,12 +8,16 @@ function Header() {
 
   return (
     <header className="header">
-      <Link to="/" className="header__brand">
+      <NavLink to="/" className="header__brand">
         CountryPeek
-      </Link>
+      </NavLink>
       <nav className="header__nav">
-        <Link to="/">Home</Link>
-        <Link to="/favourites">Favourites</Link>
+        <NavLink to="/" className={({ isActive }) => isActive ? 'header__link active' : 'header__link'}>
+          Home
+        </NavLink>
+        <NavLink to="/favourites" className={({ isActive }) => isActive ? 'header__link active' : 'header__link'}>
+          Favourites
+        </NavLink>
         {/* 3. theme toggle button */}
         <button onClick={toggleTheme} className="theme-toggle">
           {theme === "light" ? "Dark Mode" : "Light Mode"}
