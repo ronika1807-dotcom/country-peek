@@ -182,3 +182,22 @@
     border-right-color: var(--border);
   }
 }
+
+
+/* Base favourite button */
+.fav-btn {
+  background: none;       /* reset browser default */
+  border: none;           /* reset browser default */
+  cursor: pointer;        /* show pointer on hover */
+  font-size: 0.9rem;      /* small font size */
+  padding: 0.25rem 0.5rem;
+  color: #666;            /* muted tone */
+  margin-top: 0.5rem;     /* sits below card info */
+}
+
+/* Saved state */
+.fav-btn--saved {
+  color: crimson;         /* red tone to indicate active */
+  font-weight: bold;      /* emphasize saved state */
+}
+
